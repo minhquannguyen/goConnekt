@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,11 +18,18 @@
     <![endif]-->
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-static-top">
+
+  <!-- This is the code for the navbar -- >
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container">
 
-        <a class="navbar-brand" href="https://www.goconnekt.com/"><span id="go">go</span><span id="Connekt">Connekt</span></a>
 
+        <!-- <a class="navbar-brand" href="https://www.goconnekt.com/"><span id="go">go</span><span id="Connekt">Connekt</span></a> -->
+
+        <a href="https://www.goconnekt.com/" class="btn-small navbar-btn pull-left" id="logo">
+          <img src="images/logo.png"/>
+        </a>
+       
         
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 
@@ -50,8 +58,25 @@
         </div>
       </div>
     </div>
+
+    <!-- End navbar -->
+
+    <div class="container">
+      <section class="slider">
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="images/bridge2.jpg" />
+              </li>
+              <li>
+                <img src="images/sf.jpg" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     
-    <div class="bg"></div>
+    <!-- <div class="bg"></div>
       <div class="container">
         <div class="jumbotron">
           <h1>Home page</h1>
@@ -77,6 +102,35 @@
   <img src="http://lorempixum.com/500/600"/>
   <p>Ross has over 10 years experience in the industry. He is our Creative Director, digital designer, web designer and front-end developer. He is also pretty good with a sketchbook. Before starting the company Ross worked as a designer and studio manager for a design house who boasted a number of big name clients. Ross has brought his vast experience from this role to the work he does now.</p>
       </div>
+    </div> -->
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4">
+
+          <h2>Get</h2>
+          <p>your device at any of our conveniently located pickup locations and take it with you anywhere.</p>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <h2>Go</h2>
+          <p>from city to city with nation wide coverage and no dead zones.</p>
+
+        </div>
+
+        <div class="col-md-4">
+
+          <h2>Connekt</h2>
+          <p>to high speed internet where ever you travel. Simple, Mobile, and Convenient.
+
+        </div>
+
+      </div>
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -84,5 +138,27 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js>"></script>
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        SyntaxHighlighter.all();
+      });
+      $(window).load(function(){
+        $('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider){
+            $('body').removeClass('loading');
+          }
+        });
+      });
+    </script>
+
   </body>
 </html>
